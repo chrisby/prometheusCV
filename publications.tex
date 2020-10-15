@@ -1,0 +1,19 @@
+Authors who equally contributed to a publication are marked with a \textdagger.
+
+\newcounter{publicationCounter}			% We set an publication counter, we can continue counting the publications when switchen from conferences to workshop etc.
+\subsection{Conference and Journal Publications}
+
+\begin{enumerate}
+	\item \textbf{Promotheus Fire}\ec, Zeus\ec, Hera, Poseidon, Artemis. Why Titans are better than Gods but Gods are also not that bad. In \textit{Proceedings of the \nth{1} Conference on Myths in the Universe.}
+	\item \lipsum[1][1-3]
+	%
+	\setcounter{publicationCounter}{\value{enumi}}	% Remember the counts
+\end{enumerate}
+
+\subsection{Workshop Publications}
+\begin{enumerate}
+	\setcounter{enumi}{\value{publicationCounter}}	% Continue counting
+	\item \lipsum[1][4-7]
+	\setcounter{publicationCounter}{\value{enumi}}	% Remember the counts
+\end{enumerate}
+

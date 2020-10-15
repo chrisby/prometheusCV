@@ -1,0 +1,94 @@
+\documentclass{prometheus_cv}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={5.3in, 10in}, top=2cm]{geometry}						  % width=5.3in, height=10in, top margin=2cm on each page
+
+\usepackage{xcolor}																				  % define some colors
+\definecolor{highlight}{HTML}{283559}
+\definecolor{highlight2}{HTML}{1A2640}
+\definecolor{link}{HTML}{5C6273}
+
+\usepackage{lipsum}
+\usepackage{siunitx}																			  % package to properly set units
+\usepackage{fontawesome5}																 % package for icons (see list of available icons here: http://mirrors.ibiblio.org/CTAN/fonts/fontawesome5/doc/fontawesome5.pdf)
+\usepackage[super]{nth}																		   % when you write \nth{2} you get a nice superscript
+\usepackage[																						   % coloring of links
+						colorlinks = true,
+						linkcolor = highlight,
+						urlcolor = highlight,
+						citecolor= highlight
+						]{hyperref}
+
+\usepackage{fontspec}																			% package to change fonts				
+\setmainfont[
+	BoldFont=Cormorant Garamond Bold,
+	ItalicFont=Cormorant Garamond Italic,
+	BoldItalicFont=Cormorant Garamond Bold Italic
+]{Cormorant Garamond Regular}																		 % Set the main font to Comorant Garamond (https://github.com/CatharsisFonts/Cormorant)
+\newfontfamily\GaramondLight{Cormorant Garamond Light}
+\newcommand\textlf[1]{{\GaramondLight#1}}
+
+\newcommand{\highlight}[1]{\textcolor{highlight}{\textbf{#1}}}		% highlight text as bold and with the highlight color defined above
+\newcommand{\ec}{\textsuperscript{\textdagger}}								% Equal contribution dagger
+
+
+% define the headers %
+\usepackage{fancyhdr}																		  
+\fancyhf{}
+\rhead{Curriculum Vit\ae}
+\lhead{Prometheus Fire}
+\rfoot{Page \thepage}
+
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\begin{document}
+\thispagestyle{empty}		% Turn off header and footer for the first page
+\pagestyle{fancy}			 % For the rest of the pages switch to the fancy page style defined just above the document begin
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% TITLE %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace*{-1cm}
+\centering 
+\input{title.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% EDUCATION %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace*{0.4cm}
+\section{Education}
+\input{education.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% PUBLICATIONS %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Publications}
+\input{publications.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% HONORS and SCHOLARSHIPS %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Honors}
+\input{honors.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% SKILLS %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Skills}
+\input{skills.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% SERVICE %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Service To The Scientific Community}
+\input{service}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% EXTRAS %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Extracurricular Activities}
+\input{extra.tex}
+
+\end{document}
